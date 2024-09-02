@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Image Sentiment Analysis</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Logo Section -->
+            <div class="col-md-6 d-flex justify-content-center align-items-center">
+                <img src = "", alt="">
+            </div>
+            <!-- Upload Section -->
+            <div class="col-md-6">
+                <h3>Upload an Image</h3>
+                <form method="POST" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <input type="file" class="form-control-file" name="image" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Upload</button>
+                </form>
+                <!-- Text Area to Show Image Sentiment -->
+                <div class="mt-4">
+                    <label for="sentiment">Image Sentiment:</label>
+                    <textarea id="sentiment" class="form-control" rows="3" readonly>{{ sentiment }}</textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
