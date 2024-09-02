@@ -1,4 +1,5 @@
 import cv2
+from static import model
 
 def convert_to_grayscale(image):
     """
@@ -29,5 +30,5 @@ def resize_image(image, size=(48, 48)):
 
 
 def get_prediction(finalimg):
-    prediction = model.predict(finalimg)
+    prediction = model.keras.predict(finalimg)
     return prediction
